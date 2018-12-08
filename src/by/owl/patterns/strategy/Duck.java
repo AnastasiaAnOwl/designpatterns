@@ -8,8 +8,16 @@ package by.owl.patterns.strategy;
  */
 public abstract class Duck {
 	
-	public abstract void quack();
-	public abstract void swim();
+	public void quack() {
+		System.out.println("Quack!");
+	};
+	public void swim() {
+		System.out.println("Swim-swim");
+	}
+	public void fly( ) {
+		System.out.println("Fly-fly");
+	}
 	public abstract void display();
+	
 
 }
