@@ -6,7 +6,10 @@ package by.owl.patterns.strategy;
  * @author anowl
  *
  */
-public abstract class Duck {
+public abstract class Duck implements FlyBehavior, QuackBehavior {
+	
+	protected FlyBehavior flyBehavior;
+	protected QuackBehavior quackBehavior;
 	
 	public void quack() {
 		System.out.println("Quack!");
@@ -18,6 +21,12 @@ public abstract class Duck {
 		System.out.println("Fly-fly");
 	}
 	public abstract void display();
+	public void performQuack() {
+		quackBehavior.quack();
+	}
+	public void performFly() {
+		flyBehavior.fly();
+	}
 	
 
 }
