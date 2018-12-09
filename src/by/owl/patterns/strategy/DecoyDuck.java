@@ -1,17 +1,14 @@
 package by.owl.patterns.strategy;
 
 public class DecoyDuck extends Duck {
-	@Override
-	public void quack() {
 		
+	public DecoyDuck() {
+		quackBehavior = new MuteQuack();
+		flyBehavior = new FlyNoWay();
 	}
-	@Override
-	public void fly() {
-		
-	}
+	
 	@Override
 	public void display() {
 		System.out.println("I'm a decoy duck");
 	}
-
 }
