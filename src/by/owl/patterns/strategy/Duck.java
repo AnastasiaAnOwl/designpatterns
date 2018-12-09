@@ -25,5 +25,9 @@ public abstract class Duck {
 	public void performFly() {
 		flyBehavior.fly();
 	}
+	
+	public void sqim() {
+		System.out.println("All ducks float, even decoys!");
+	}
 
 }
